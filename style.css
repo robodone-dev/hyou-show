@@ -1,0 +1,16 @@
+canvas{
+  display:none;
+}
+
+.wrapper{
+  text-align:center;
+}
+
+#canvas_text{
+ width:30%;
+ height:30px;
+}
+
+#canvas_input{
+  height:35px;
+}
