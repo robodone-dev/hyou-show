@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>canvasへの文字描画</title></head>
+<body onload="loadImage('preview');">
+<p><canvas id="preview"></canvas></p>
+</div>
+<p>
+<input type="text" id="canvas_text" value="ここに名前">
+<button onclick="drawText('preview', 'canvas_text');">文字を描く</button>
+</p>
+<button id="download" onclick="downloadCanvas()">download</button>
+</body>
+</html>
