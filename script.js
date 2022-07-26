@@ -31,6 +31,7 @@ function drawText(canvas_id, text_id)
 	var x = (canvas.width / 2);
 	var y = (canvas.height / 2.5);
 	ctx.fillText(text.value, x, y);
+  downloadCanvas()
 }
 
 
