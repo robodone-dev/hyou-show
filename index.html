@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html labg="en">
 <head>
-  <meta charset="UTF-8"><title>表彰APP</title>
-  <link href="https://robodone-dev.github.io/hyou-show/style.css" rel="stylesheet">
+<meta chrset="utf-8" />
+<title>Modal App　Challenge</title>
+<link rel="stylesheet" href="https://robodone-dev.github.io/hyou-show/style.css" />
 </head>
-<body onload="loadImage('preview');">
-<p><canvas id="preview"></canvas></p>
-</div>
-<p>
-<div class="wrapper">
-<input type="text" id="canvas_text" placeholder="ここに名前を入れてください">
-<button onclick="drawText('preview', 'canvas_text');" id="canvas_input">出力</button>
-</p>
-<!--<button id="download" onclick="downloadCanvas()">download</button>-->
-</div>
+<body>
+  <button id="modalOpen" class="button">Click Me</button>
+  <div id="easyModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1>Great job 🎉</h1>
+        <span class="modalClose">×</span>
+      </div>
+      <div class="modal-body">
+      <div class="wrapper">
+      <input type="text" id="canvas_text" placeholder="ここに名前を入れてください">
+      <button onclick="drawText('preview', 'canvas_text');" id="canvas_input">出力</button>
+      </p>
+      <!-- <button id="download" onclick="downloadCanvas()">download</button> -->
+      </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://robodone-dev.github.io/hyou-show/script.js"></script>
 </body>
-<script type="text/javascript" src="https://robodone-dev.github.io/hyou-show/script.js"></script>
 </html>
