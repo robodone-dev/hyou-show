@@ -1,30 +1,7 @@
-* {                     /* ブラウザ全体の余白を消す */
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: sans-serif;
-  height: 100vh;
-  position: relative;      /* body要素にflexboxを指定する */
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background: linear-gradient(to top left, #f76060, #ebd407);    /* body要素の背景をグラデーションにする */
-}
 
 .show-modal {
-  font-size: 20px;      /* modalを開くボタン */
-  font-weight: 600;
-  padding: 10px 30px;
-  border: none;
-  margin-top: 100px;
-  background-color: #fff;
-  color: #444;
-  border-radius: 20px;
-  cursor: pointer;
+  display:none;
 }
-
 .close-modal {
   position: absolute;              /* modalを閉じるボタン */
   top: 4px;
@@ -36,10 +13,6 @@ body {
   background: none;
 }
 
-p {
-  font-size: 20px;
-}
-
 .hidden {
   display: none;            /* hiddenクラスが付与されている場合は表示させないようにする */
 }
@@ -49,13 +22,20 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: auto;
   color: rgb(255, 0, 0);
   background-color: white;
-  padding: 6rem;
+  padding: 2rem 1rem;
   border-radius: 5px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);   /* modalに影を作る */
   z-index: 10;           /* z-indexでmodalを一番上に位置させる */
+}
+
+
+.modal p{
+  font-size:0.8rem;
+  font-weight:bold;
+  text-align:center;
 }
 
 .overlay {
@@ -68,3 +48,14 @@ p {
   backdrop-filter: blur(3px); /* 一番下のbody領域をぼやかす */
   z-index: 5; /* z-indexの数字を0と10の間の数字にし、bodyとmodalの真ん中に位置させる */
 }
+
+
+#canvas_text{
+ width:200px;
+ min-width:200px;
+ height:30px;
+}
+
+#canvas_input{
+  height:35px;
+} 
