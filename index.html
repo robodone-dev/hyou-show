@@ -8,20 +8,31 @@
 
 <!-- <body onload="loadImage('preview');"> -->
 <body>
+
+<!-- クリックしたらモーダルを表示するボタン -->
+<a href="#" class="btn">モーダルウィンドウを表示</a>
+
+<!-- オーバーレイ -->
+<div class="overlay"></div>
+
 <p><canvas id="preview"></canvas></p>
   
-<div class="popup" id="js-popup">
-  <div class="popup-inner">
-    <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+<!-- モーダルウィンドウ -->
+<div class="modal">
+  <div class="close">&times</div>
+    <h2>モダルのタイトル</h2>
     <div class="wrapper">
     <input type="text" id="canvas_text" placeholder="ここに名前を入れてください">
     <button onclick="drawText('preview', 'canvas_text');" id="canvas_input">出力</button>
     </p>
     <!-- <button id="download" onclick="downloadCanvas()">download</button> -->
     </div>
-  </div>
-  <div class="black-background" id="js-black-bg"></div>
 </div>
+
+<!-- スクロールで高さを出すためのsectionタグ -->
+<section></section>
+  
+  
 </body>
 <script type="text/javascript" src="https://robodone-dev.github.io/hyou-show/script.js"></script>
 </html>
