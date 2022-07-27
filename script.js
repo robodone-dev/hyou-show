@@ -1,5 +1,8 @@
 window.onload = function() {
   var popup = document.getElementById('js-popup');
+  
+  loadImage('preview');
+  
   if(!popup) return;
   popup.classList.add('is-show');
 
@@ -33,6 +36,7 @@ function loadImage(id)
 		canvas.height = image.height;
 		//キャンバスに画像を描画（開始位置0,0）
 		ctx.drawImage(image, 0, 0);
+    console.log("load");
 	});
 }
 //キャンバスに文字を描く
@@ -92,6 +96,7 @@ function drawDate(canvas_id, text_id)
 
 function downloadCanvas(){
     var canvas = document.getElementById("preview");
+    console.log(canvas);
     var link = document.createElement("a");
     link.href = canvas.toDataURL("image/png");
     link.download = "test.png";
