@@ -1,26 +1,22 @@
-const buttonOpen = document.getElementById('modalOpen');
-const modal = document.getElementById('easyModal');
-const buttonClose = document.getElementsByClassName('modalClose')[0];
+window.onload = function() {
+  var popup = document.getElementById('js-popup');
+  if(!popup) return;
+  popup.classList.add('is-show');
 
-// ボタンがクリックされた時
-buttonOpen.addEventListener('click', modalOpen);
-function modalOpen() {
-  modal.style.display = 'block';
+  var blackBg = document.getElementById('js-black-bg');
+  var closeBtn = document.getElementById('js-close-btn');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.remove('is-show');
+    })
+  }
 }
 
-// バツ印がクリックされた時
-buttonClose.addEventListener('click', modalClose);
-function modalClose() {
-  modal.style.display = 'none';
-}
-
-// モーダルコンテンツ以外がクリックされた時
-// addEventListener('click', outsideClose);
-// function outsideClose(e) {
-//   if (e.target == modal) {
-//     modal.style.display = 'none';
-//   }
-// }
 
 //キャンバスに画像を描画する
 function loadImage(id)
