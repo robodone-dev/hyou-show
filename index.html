@@ -3,26 +3,24 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://robodone-dev.github.io/hyou-show/style.css" />
   <title>モーダルウィンドウ</title>
 </head>
 
 <body>
-  <div class="overlay hidden"></div> <!-- overlay -->
+<p><canvas id="preview"></canvas></p>  
+<div class="overlay hidden"></div> <!-- overlay -->
 
-  <button class="show-modal">モーダルボタン</button> <!-- モーダルを表示されるボタン -->
-
+  <button class="show-modal"></button> <!-- モーダルを表示されるボタン -->
   <div class="modal hidden">
     <!-- モーダル-->
     <button class="close-modal">&times;</button> <!-- モーダルを閉じるボタン -->
-    <p>
-      モダールウィンドウです。
-    </p>
+    <p>今日のノルマクリア！おめでとう！</p>
+    <input type="text" id="canvas_text" placeholder="ここに名前を入れてください">
+    <button onclick="drawText('preview', 'canvas_text');" id="canvas_input">出力</button>
   </div>
 
-  <script src="script.js"></script>
+  <script src="https://robodone-dev.github.io/hyou-show/script.js"></script>
 </body>
 
 </html>
