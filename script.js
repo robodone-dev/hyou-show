@@ -48,8 +48,8 @@ function loadImage(id)
 		var canvas = document.getElementById(id);
 		var ctx = canvas.getContext('2d');
 		//キャンバスのサイズを画像サイズに合わせる
-		canvas.width = image.width;
-		canvas.height = image.height;
+		//canvas.width = image.width;
+		//canvas.height = image.height;
 		//キャンバスに画像を描画（開始位置0,0）
 		ctx.drawImage(image, 0, 0);
     console.log("load");
