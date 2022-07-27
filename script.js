@@ -41,7 +41,7 @@ function drawText(canvas_id, text_id)
 	ctx.textAlign = 'center';
 	//座標を指定して文字を描く（座標は画像の中心に）
 	var x = (canvas.width / 2);
-	var y = (canvas.height / 2.5);
+	var y = (canvas.height / 2.);
 	ctx.fillText(text.value, x, y);
   drawDate('preview', data);
   downloadCanvas();
