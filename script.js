@@ -21,6 +21,18 @@ function drawText(canvas_id, text_id)
 	var canvas = document.getElementById(canvas_id);
 	var ctx = canvas.getContext('2d');
 	var text = document.getElementById(text_id);
+   
+  //時刻データを取得して変数jikanに格納する
+  var jikan= new Date();
+
+  //時・分・秒を取得する
+  var year = jikan.getFullYear();
+  var month = jikan.getMonth();
+  var day = jikan.getDay();
+  
+  var data = year + "年" + month + "月" + day + "日";
+  //console.log(data);
+  
 	//文字のスタイルを指定
 	ctx.font = '32px serif';
 	ctx.fillStyle = '#404040';
@@ -31,7 +43,28 @@ function drawText(canvas_id, text_id)
 	var x = (canvas.width / 2);
 	var y = (canvas.height / 2.5);
 	ctx.fillText(text.value, x, y);
-  	downloadCanvas();
+  drawDate('preview', data);
+  downloadCanvas();
+  
+}
+
+function drawDate(canvas_id, text_id)
+{
+	var canvas = document.getElementById(canvas_id);
+	var ctx = canvas.getContext('2d');
+	//var text = document.getElementById(text_id);
+  var text = text_id;
+  //console.log(text);
+	//文字のスタイルを指定
+	ctx.font = '32px serif';
+	ctx.fillStyle = '#404040';
+	//文字の配置を指定（左上基準にしたければtop/leftだが、文字の中心座標を指定するのでcenter
+	ctx.textBaseline = 'center';
+	ctx.textAlign = 'center';
+	//座標を指定して文字を描く（座標は画像の中心に）
+	var x = (canvas.width / 2);
+	var y = (canvas.height / 1.465);
+	ctx.fillText(text, x, y);
 }
 
 
