@@ -13,10 +13,10 @@ window.onload = function() {
   popup.classList.add('is-show');
 
   // var blackBg = document.getElementById('js-black-bg');
-  // var closeBtn = document.getElementById('js-close-btn');
+  var closeBtn = document.getElementById('js-close-btn');
 
   // closePopUp(blackBg);
-  // closePopUp(closeBtn);
+  closePopUp(closeBtn);
 
   function closePopUp(elem) {
     if(!elem) return;
