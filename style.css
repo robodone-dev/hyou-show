@@ -76,7 +76,7 @@ body{
   cursor: pointer;
 }
 
-/* .close-btn {
+.close-btn {
   position: absolute;
   right: 0;
   top: 0;
@@ -89,7 +89,7 @@ body{
 .close-btn i {
   font-size: 20px;
   color: #333;
-} */
+}
 .black-background {
   position: absolute;
   left: 0;
