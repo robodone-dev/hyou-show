@@ -67,3 +67,7 @@ canvas{
 #canvas_input{
   height:35px;
 } 
+
+input {
+font-size: 1.5rem;
+}
