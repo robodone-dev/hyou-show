@@ -1,3 +1,9 @@
+function previewCanvasImage(){
+  var popup2 = document.getElementById('js-popup2');
+  popup2.classList.add('is-show2');
+  CanvasToImage();
+}
+
 window.onload = function() {
   var popup = document.getElementById('js-popup');
   
@@ -6,18 +12,18 @@ window.onload = function() {
   if(!popup) return;
   popup.classList.add('is-show');
 
-  var blackBg = document.getElementById('js-black-bg');
-  var closeBtn = document.getElementById('js-close-btn');
+  // var blackBg = document.getElementById('js-black-bg');
+  // var closeBtn = document.getElementById('js-close-btn');
 
   // closePopUp(blackBg);
   // closePopUp(closeBtn);
 
-  function closePopUp(elem) {
-    if(!elem) return;
-    elem.addEventListener('click', function() {
-      popup.classList.remove('is-show');
-    })
-  }
+  // function closePopUp(elem) {
+  //   if(!elem) return;
+  //   elem.addEventListener('click', function() {
+  //     popup.classList.remove('is-show');
+  //   })
+  // }
 }
 
 
@@ -69,8 +75,9 @@ function drawText(canvas_id, text_id)
 	//var y = (canvas.height / 2.46);
 	ctx.fillText(text.value, x, y);
   drawDate('preview', data);
-  downloadCanvas();
   
+  // downloadCanvas();
+  previewCanvasImage();
 }
 
 function drawDate(canvas_id, text_id)
@@ -96,9 +103,16 @@ function drawDate(canvas_id, text_id)
 
 function downloadCanvas(){
     var canvas = document.getElementById("preview");
-    console.log(canvas);
+    //console.log(canvas);
     var link = document.createElement("a");
     link.href = canvas.toDataURL("image/png");
     link.download = "test.png";
     link.click();
+}
+
+function CanvasToImage(){
+    var cvs = document.getElementById("preview");
+    var png = cvs.toDataURL();
+    //console.log(canvas);
+    document.getElementById("newImg").src = png;
 }
