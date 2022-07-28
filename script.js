@@ -1,40 +1,24 @@
-window.onload = function() {  
+window.onload = function() {
+  var popup = document.getElementById('js-popup');
+  
   loadImage('preview');
+  
+  if(!popup) return;
+  popup.classList.add('is-show');
+
+  var blackBg = document.getElementById('js-black-bg');
+  var closeBtn = document.getElementById('js-close-btn');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.remove('is-show');
+    })
+  }
 }
-
-
-
-const modal = document.querySelector(".modal"); //modalを指定
-const overlay = document.querySelector(".overlay"); //overlayを指定
-const btnOpenModal = document.querySelector(".show-modal"); //modalを開くボタンを指定
-const btnCloseModal = document.querySelector(".close-modal"); //modalを閉じるボタンを指定
-
-//modalとoverlayのhiddenクラスを消す（modalとoverlayが見えるようにする）処理
-const openModal = () => {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-  finishAudio();
-};
-
-
-//modalとoverlayのhiddenクラスを追加する（modalとoverlayが見えないようにする）処理
-const closeModal = () => {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-  doReload();
-};
-
-
-//modalの開くボタンと閉じるボタンをクリックした時の処理
-//btnOpenModal.addEventListener("click", openModal);
-btnCloseModal.addEventListener("click", closeModal);
-
-
-window.addEventListener("load", ()=>{
-    // 起動時の処理
-    openModal();
-});
-
 
 
 //キャンバスに画像を描画する
@@ -48,8 +32,8 @@ function loadImage(id)
 		var canvas = document.getElementById(id);
 		var ctx = canvas.getContext('2d');
 		//キャンバスのサイズを画像サイズに合わせる
-		//canvas.width = image.width;
-		//canvas.height = image.height;
+		canvas.width = image.width;
+		canvas.height = image.height;
 		//キャンバスに画像を描画（開始位置0,0）
 		ctx.drawImage(image, 0, 0);
     console.log("load");
