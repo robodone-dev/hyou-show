@@ -18,12 +18,19 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   width: 70vw;
   height:30vh;
 /*   max-width: 600px; */
-  padding: 50px;
+  padding: 30px;
   background-color: #fff;
   z-index: 2;
+  border-radius:20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .close-btn {
@@ -56,20 +63,28 @@ canvas{
 }
 
 .wrapper{
-  text-align:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+/* 参考：https://qiita.com/ohmoto_2020/items/a3c92bc327874adfb8e9  */
 }
 
 #canvas_text{
- width:40vw;
+ width:50vw;
  height:auto;
  padding:5px;
+ margin-bottom:10px;
+  
 }
 
 #canvas_input{
-  width:10vw;
+  width:auto;
   height:auto;
 } 
 
-input,button {
-font-size: 1.5rem;
+input {
+  font-size: 1.5rem;
+}
+button {
+  font-size: 1.0rem;
 }
