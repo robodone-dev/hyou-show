@@ -3,11 +3,11 @@
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100vw;
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: .6s;
+/*   transition: .6s; */
 }
 .popup.is-show {
   opacity: 1;
@@ -19,6 +19,7 @@
   top: 50%;
   transform: translate(-50%,-50%);
   width: 70vw;
+  height:30vh;
 /*   max-width: 600px; */
   padding: 50px;
   background-color: #fff;
@@ -59,9 +60,8 @@ canvas{
 }
 
 #canvas_text{
- width:200px;
- min-width:200px;
- height:30px;
+ width:40vw;
+ height:10vh;
 }
 
 #canvas_input{
