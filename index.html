@@ -4,6 +4,8 @@
   <meta charset="UTF-8"><title>表彰APP</title>
   <link href="https://robodone-dev.github.io/hyou-show/style.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet"> 
+
 </head>
 
 <!--<body onload="loadImage('preview');">-->
@@ -14,8 +16,10 @@
   <div class="popup-inner">
 <!--<div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div> -->
     <div class="wrapper">
+    <img id="crap-gif" src="https://robodone-dev.github.io/hyou-show/拍手-パチパチ.gif">
+      <h2 id="message" class="gr_anime"><span>congratulations!</span></h2>
     <input type="text" id="canvas_text" placeholder="ここに名前を入れてください">
-    <button onclick="drawText('preview', 'canvas_text');" id="canvas_input"><ruby><rb>表彰状</rb><rt>ひょうしょうじょう</rt></ruby>を<ruby><rb>出力</rb><rt>しゅつりょく</rt></ruby></button>
+    <button onclick="drawText('preview', 'canvas_text');" id="canvas_input" class="btn-export"><ruby><rb>表彰状</rb><rt>ひょうしょうじょう</rt></ruby>を<ruby><rb>出力</rb><rt>しゅつりょく</rt></ruby></button>
     <!-- <button id="download" onclick="downloadCanvas()">download</button> -->
     </div>
   </div>
