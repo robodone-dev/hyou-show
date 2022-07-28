@@ -61,13 +61,15 @@ canvas{
 
 #canvas_text{
  width:40vw;
- height:10vh;
+ height:auto;
+ padding:5px;
 }
 
 #canvas_input{
-  height:35px;
+  width:10vw;
+  height:auto;
 } 
 
-input {
+input,button {
 font-size: 1.5rem;
 }
