@@ -6,38 +6,6 @@ body{
   width:50%;
 }
 
-.popup2 {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  width: 10vw;
-  height: 10vh;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-/*   transition: .6s; */
-}
-.popup2.is-show2 {
-  opacity: 1;
-  visibility: visible;
-}
-.popup-inner2 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  width: 70vw;
-  height:auto;
-  z-index: 1000;
-  border-radius:20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
 
 .popup {
   position: fixed;
