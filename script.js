@@ -18,12 +18,12 @@ window.onload = function() {
   // closePopUp(blackBg);
   // closePopUp(closeBtn);
 
-  // function closePopUp(elem) {
-  //   if(!elem) return;
-  //   elem.addEventListener('click', function() {
-  //     popup.classList.remove('is-show');
-  //   })
-  // }
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.remove('is-show2');
+    })
+  }
 }
 
 
