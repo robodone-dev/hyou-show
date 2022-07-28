@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="ja">
-
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="https://robodone-dev.github.io/hyou-show/style.css" />
-  <title>モーダルウィンドウ</title>
+  <meta charset="UTF-8"><title>表彰APP</title>
+  <link href="https://robodone-dev.github.io/hyou-show/style.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 </head>
 
+<!--<body onload="loadImage('preview');">-->
 <body>
-<p><canvas id="preview"></canvas></p>  
-<div class="overlay hidden"></div> <!-- overlay -->
-
-  <button class="show-modal"></button> <!-- モーダルを表示されるボタン -->
-  <div class="modal hidden">
-    <!-- モーダル-->
-    <button class="close-modal">&times;</button> <!-- モーダルを閉じるボタン -->
-    <p>今日のノルマクリア！おめでとう！</p>
+<p><canvas id="preview"></canvas></p>
+  
+<div class="popup" id="js-popup">
+  <div class="popup-inner">
+    <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+    <p>
+    <div class="wrapper">
     <input type="text" id="canvas_text" placeholder="ここに名前を入れてください">
     <button onclick="drawText('preview', 'canvas_text');" id="canvas_input">出力</button>
+    </p>
+    <!-- <button id="download" onclick="downloadCanvas()">download</button> -->
+    </div>
   </div>
-
-  <script src="https://robodone-dev.github.io/hyou-show/script.js"></script>
+  <div class="black-background" id="js-black-bg"></div>
+</div>
 </body>
-
+<script type="text/javascript" src="https://robodone-dev.github.io/hyou-show/script.js"></script>
 </html>
