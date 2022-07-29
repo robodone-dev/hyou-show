@@ -1,11 +1,14 @@
 body{
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-
 }
 
 #newImg{
-  margin-top:50px;
-  width:50%;
+  margin:50px 0px;
+  width:60%;
+}
+
+#canvas_return{
+  display:none;
 }
 
 .popup {
@@ -19,8 +22,6 @@ body{
   z-index: 0;
   opacity: 0;
   visibility: hidden;
-  overflow-y: auto;
-  overflow-y: scroll;
 }
 .popup.is-show {
   opacity: 1;
