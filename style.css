@@ -3,8 +3,12 @@ body{
 }
 
 #newImg{
-  margin-bottom:40px;
-  width:40%;
+  margin:50px 0px;
+  width:45%;
+}
+
+#dowload_message{
+  display:none;
 }
 
 #canvas_return{
