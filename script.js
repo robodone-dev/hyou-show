@@ -107,7 +107,23 @@ function downloadCanvas(){
 
 function CanvasToImage(){
     var cvs = document.getElementById("preview");
-    var png = cvs.toDataURL();
-    //console.log(canvas);
-    document.getElementById("newImg").src = png;
+    var crapGif = document.getElementById("crap-gif");
+    var message = document.getElementById("message");
+    var canvasInput = document.getElementById("canvas_input");
+    var canvasText = document.getElementById("canvas_text");
+    var canvasReturn = document.getElementById("canvas_return");
+    // var png = cvs.toDataURL();
+    // //console.log(canvas);
+    // document.getElementById("newImg").src = png;
+    crapGif.style.display = "none";
+    message.style.display = "none";
+    canvasText.style.display = "none";
+    canvasInput.style.display = "none";
+    canvasReturn.style.display = "flex";
+    
+}
+
+function doReload() {
+    // reloadメソッドによりページをリロード
+    window.location.reload();
 }
