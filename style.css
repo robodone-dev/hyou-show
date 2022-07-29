@@ -3,11 +3,12 @@ body{
 }
 
 #newImg{
-  margin:50px 0px;
+  margin:10px 0px 30px 0px;
   width:45%;
 }
 
 #dowload_message{
+  font-size:1rem;
   display:none;
 }
 
