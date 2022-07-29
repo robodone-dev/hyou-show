@@ -112,6 +112,7 @@ function CanvasToImage(){
     var canvasInput = document.getElementById("canvas_input");
     var canvasText = document.getElementById("canvas_text");
     var canvasReturn = document.getElementById("canvas_return");
+    var dowloadMessage = document.getElementById("dowload_message");
     var png = cvs.toDataURL();
     //console.log(canvas);
     document.getElementById("newImg").src = png;
@@ -120,6 +121,7 @@ function CanvasToImage(){
     canvasText.style.display = "none";
     canvasInput.style.display = "none";
     canvasReturn.style.display = "flex";
+    dowloadMessage.style.display = "flex";
     
 }
 
