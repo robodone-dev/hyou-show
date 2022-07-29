@@ -112,9 +112,9 @@ function CanvasToImage(){
     var canvasInput = document.getElementById("canvas_input");
     var canvasText = document.getElementById("canvas_text");
     var canvasReturn = document.getElementById("canvas_return");
-    // var png = cvs.toDataURL();
-    // //console.log(canvas);
-    // document.getElementById("newImg").src = png;
+    var png = cvs.toDataURL();
+    //console.log(canvas);
+    document.getElementById("newImg").src = png;
     crapGif.style.display = "none";
     message.style.display = "none";
     canvasText.style.display = "none";
