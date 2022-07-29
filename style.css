@@ -1,19 +1,21 @@
 body{
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+
 }
 
 #newImg{
   margin-top:50px;
-  width:60%;
+  width:50%;
 }
 
-
 .popup {
-  position: relative;
+  position: fixed;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100%;
   z-index: 0;
   opacity: 0;
   visibility: hidden;
@@ -23,6 +25,7 @@ body{
 .popup.is-show {
   opacity: 1;
   visibility: visible;
+  
 }
 .popup-inner {
   position: absolute;
@@ -39,11 +42,13 @@ body{
   background-image: repeating-linear-gradient(90deg, rgba(255, 246, 222, 1) 4% 8%, rgba(255, 211, 117, 1) 8%, rgba(255, 212, 118, 1) 12%);
   z-index: 2;
   border-radius:20px;
-  display: flex;
+
+/*   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   cursor: pointer;
+
 }
 
 .close-btn {
