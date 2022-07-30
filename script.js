@@ -101,7 +101,8 @@ function downloadCanvas(){
     //console.log(canvas);
     var link = document.createElement("a");
     link.href = canvas.toDataURL("image/png");
-    link.download = "test.png";
+    var exportName = "ロボ単表彰状（パーツの名前）"
+    link.download = exportName + ".png";
     link.click();
 }
 
